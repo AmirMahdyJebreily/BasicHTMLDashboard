@@ -446,6 +446,22 @@ video {
   display: none;
 }
 
+:root {
+  --clr-primary: #545f71;
+  --clr-secondary: #eef1f4;
+  --clr-background: #f9fafb;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: var(--clr-background);
+  color: var(--clr-primary);
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -552,4 +568,34 @@ video {
   --tw-contain-layout:  ;
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
+}
+
+main.flex-container {
+  height: 100%;
+  width: 100%;
+}
+
+header.flex-container {
+  padding: 1rem;
+}
+
+aside.side-menu {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.size-6 {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }

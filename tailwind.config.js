@@ -5,8 +5,13 @@ module.exports = {
     "./src/icons/*.js",
   ],
   theme: {
-    extend: {
 
+    extend: {
+      colors: {
+        primary: 'var(--clr-primary)',
+        secondary: 'var(--clr-secondary)',
+        background: 'var(--clr-background)',
+      },
     },
   },
   plugins: [],

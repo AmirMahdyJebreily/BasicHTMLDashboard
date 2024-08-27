@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    :root {
+      --clr-primary: #545f71;
+      --clr-secondary: #eef1f4;
+      --clr-background: #f9fafb;
+    }
+
+
+    body{
+        @apply bg-white text-primary bg-background w-screen h-screen overflow-hidden
+    }
+}
+
+@layer utilities {
+    .flex-container {
+        @apply flex justify-start items-center
+    }
+}
+
+@layer components {
+
+    main.flex-container {
+        @apply w-full h-full
+    }
+
+    header.flex-container {
+        @apply p-4
+    }
+
+    aside.side-menu{
+        @apply bg-white h-full flex flex-col justify-start items-center
+    }
+}
