@@ -23,7 +23,6 @@
 }
 
 @layer components {
-
     main.flex-container {
         @apply w-full h-full
     }
