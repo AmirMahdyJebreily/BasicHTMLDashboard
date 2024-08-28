@@ -1,3 +1,5 @@
-import { MenuIcon } from "../icons.js"
+import { _BarsMenuIcon, _DashboardRectangleStack, _ChevronRight } from "../icons.js"
 
-customElements.define("icon-menu", MenuIcon)
+customElements.define("i-menu-3bars", _BarsMenuIcon)
+customElements.define("i-dashborad-stack", _DashboardRectangleStack)
+customElements.define("i-arrow-chev-right", _ChevronRight)

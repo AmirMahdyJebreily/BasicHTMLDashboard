@@ -2,45 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    :root {
-      --clr-primary: #545f71;
-      --clr-secondary: #eef1f4;
-      --clr-secondary2: #c5c7c9;
-      --clr-background: #f9fafb;
-    }
+  :root {
+    --clr-primary: #545f71;
+    --clr-secondary: #eef1f4;
+    --clr-secondary2: #c5c7c9;
+    --clr-background: #f9fafb;
+  }
 
-
-    body{
-        @apply bg-white text-primary bg-background w-screen h-screen overflow-hidden
-    }
+  body {
+    @apply text-primary bg-background w-screen h-screen overflow-hidden p-5;
+  }
 }
 
 @layer utilities {
-    .flex-container {
-        @apply flex justify-start items-center
-    }
+  .flex-container {
+    @apply flex justify-start items-center;
+  }
 }
 
 @layer components {
-    main.flex-container {
-        @apply w-full h-full
-    }
+  main.flex-container {
+    @apply w-full h-full;
+  }
 
-    .btn-secondary {
-        @apply bg-secondary text-primary w-12 h-11 flex justify-center items-center hover:bg-secondary2
-    }
+  .btn-empty {
+    @apply hover:bg-gray-600/5 transition-colors duration-150 px-5 py-3
+  }
 
-    .logo{
-        @apply w-full
-    }
+  .btn-only-icon-secondary {
+    @apply bg-secondary text-primary w-12 h-11 flex justify-center items-center hover:bg-secondary2;
+  }
 
-    header.flex-container {
-        @apply p-4
-    }
+  .badge-container {
+    @apply bg-white py-2 px-4 text-center text-4xl;
+  }
 
-    aside.side-menu{
-        @apply bg-white h-full flex flex-col justify-start items-center
-    }
+  .logo {
+    @apply w-full;
+  }
+
+  header.flex-container {
+    @apply py-4 gap-2;
+  }
+
+  aside.side-menu {
+    @apply bg-white h-full flex flex-col justify-start items-center py-4 px-5 z-50 w-72 absolute mt-6 me-4
+        md:z-0 md:static md:mt-0;
+  }
+
+  ul.side-menu-sub{
+    @apply w-full h-full
+  }
+  ul.side-menu-sub > li {
+    @apply btn-empty rounded-lg flex items-center justify-between gap-4
+  }
+  li.selected {
+    @apply bg-secondary
+  }
 }
