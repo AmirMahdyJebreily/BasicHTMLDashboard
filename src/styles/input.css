@@ -7,6 +7,7 @@
     :root {
       --clr-primary: #545f71;
       --clr-secondary: #eef1f4;
+      --clr-secondary2: #c5c7c9;
       --clr-background: #f9fafb;
     }
 
@@ -25,6 +26,14 @@
 @layer components {
     main.flex-container {
         @apply w-full h-full
+    }
+
+    .btn-secondary {
+        @apply bg-secondary text-primary w-12 h-11 flex justify-center items-center hover:bg-secondary2
+    }
+
+    .logo{
+        @apply w-full
     }
 
     header.flex-container {

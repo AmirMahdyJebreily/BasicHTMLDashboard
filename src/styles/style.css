@@ -449,6 +449,7 @@ video {
 :root {
   --clr-primary: #545f71;
   --clr-secondary: #eef1f4;
+  --clr-secondary2: #c5c7c9;
   --clr-background: #f9fafb;
 }
 
@@ -575,6 +576,24 @@ main.flex-container {
   width: 100%;
 }
 
+.btn-secondary {
+  display: flex;
+  height: 2.75rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--clr-secondary2);
+}
+
+.logo {
+  width: 100%;
+}
+
 header.flex-container {
   padding: 1rem;
 }
@@ -592,6 +611,10 @@ aside.side-menu {
 .size-6 {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .flex-container {
