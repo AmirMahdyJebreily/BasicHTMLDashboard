@@ -9,44 +9,147 @@
     <script src="./iconsMod.js" type="module"></script>
 </head>
 
-<body>
-    <header class="flex-container">
-        <button class="btn-only-icon-secondary rounded-full md:hidden">
+<body dir="rtl">
+    <header class="flex-container bdg-container">
+        <button id="menu-toggle" class="bdg-only-icon btn-empty rounded-full md:hidden">
             <i-menu-3bars class="size-6" />
         </button>
-        <div class="badge-container logo">
-            The Logo
-        </div>
+        <span class="flex justify-start items-start flex-col">
+            <h1 class="logo">Lorem, ipsum.</h1>
+            <h2 class="sub-logo">Lorem ipsum dolor sit amet consectetur.</h2>
+        </span>
     </header>
-    <main class="flex-container">
-        <aside class="side-menu">
+    <main class="flex-container gap-4">
+        <aside id="side-menu" class="hide">
             <ul class="side-menu-sub">
-                <li class="selected">
-                    <i-dashborad-stack class="size-8 pt-1.5"></i-dashborad-stack>
+                <li class="selected"><i-dashborad-stack class="size-8 pt-1.5"></i-dashborad-stack>
                     <span class="w-full">Dashboard</span>
                     <i-arrow-chev-right class="size-6 pt-0.5"></i-arrow-chev-right>
                 </li>
-                <li> <i-dashborad-stack class="size-8 pt-1.5"></i-dashborad-stack>
+                <li><i-dashborad-stack class="size-8 pt-1.5"></i-dashborad-stack>
                     <span class="w-full">Events</span>
                     <i-arrow-chev-right class="size-6 pt-0.5"></i-arrow-chev-right>
                 </li>
-                <li> <i-dashborad-stack class="size-8 pt-1.5"></i-dashborad-stack>
+                <li><i-dashborad-stack class="size-8 pt-1.5"></i-dashborad-stack>
                     <span class="w-full">Users</span>
                     <i-arrow-chev-right class="size-6 pt-0.5"></i-arrow-chev-right>
                 </li>
-                <li> <i-dashborad-stack class="size-8 pt-1.5"></i-dashborad-stack>
+                <li><i-dashborad-stack class="size-8 pt-1.5"></i-dashborad-stack>
                     <span class="w-full">Statistics</span>
                     <i-arrow-chev-right class="size-6 pt-0.5"></i-arrow-chev-right>
                 </li>
             </ul>
         </aside>
-        <section>
-            <!--Main sections head-->
-            <section>
-
+        <section id="main-container" class="flex flex-col items-center justify-start h-full gap-2 p-4 md:p-0">
+            <section class="main-container-row">
+                <div class="main-container-row-cell">
+                    <span class="bdg-only-icon-secondary rounded-full">
+                        <i-shopping-cart class="size-6"></i-shopping-cart>
+                    </span>
+                    <span class="flex justify-center items-start flex-col flex-1">
+                        <p class="font-semibold">Lorem ipsum dolor</p>
+                        <p class="font-thin text-sm">Lorem ipsum dolor sit.</p>
+                    </span>
+                    <span class="flex justify-center items-start flex-col flex-none">
+                        <p class="font-semibold">4.35 $</p>
+                    </span>
+                </div>
+                <div class="main-container-row-cell">
+                    <span class="bdg-only-icon-secondary rounded-full">
+                        <i-shopping-cart class="size-6"></i-shopping-cart>
+                    </span>
+                    <span class="flex justify-center items-start flex-col flex-1">
+                        <p class="font-semibold">Lorem ipsum dolor</p>
+                        <p class="font-thin text-sm">Lorem ipsum dolor sit.</p>
+                    </span>
+                    <span class="flex justify-center items-start flex-col flex-none">
+                        <p class="font-semibold">4.35 $</p>
+                    </span>
+                </div>
+                <div class="main-container-row-cell">
+                    <span class="bdg-only-icon-secondary rounded-full">
+                        <i-shopping-cart class="size-6"></i-shopping-cart>
+                    </span>
+                    <span class="flex justify-center items-start flex-col flex-1">
+                        <p class="font-semibold">Lorem ipsum dolor</p>
+                        <p class="font-thin text-sm">Lorem ipsum dolor sit.</p>
+                    </span>
+                    <span class="flex justify-center items-start flex-col flex-none">
+                        <p class="font-semibold">4.35 $</p>
+                    </span>
+                </div>
             </section>
 
+            <section class="main-container-row">
+                <div class="bdg-container flex flex-grow flex-col justify-center items-start">
+                    <p class="text-2xl font-black">$ 1,893.44</p>
+                    <p class="text-sm font-thin">USD</p>
+                    <span class="flex items-center justify-start w-full gap-2">
+                        <button class="btn btn-secondary">Transfer</button>
+                        <button class="btn btn-primary"><span>Add Money</span><i-plus class="size-6"></i-plus></button>
+                </div>
+                <div class="bdg-container flex flex-grow flex-col justify-center items-start">
+                    <p class="text-2xl font-black">$ 1,893.44</p>
+                    <p class="text-sm font-thin">USD</p>
+                    <span class="flex items-center justify-start w-full gap-2">
+                        <button class="btn btn-secondary">Transfer</button>
+                        <button class="btn btn-primary"><span>Add Money</span><i-plus class="size-6"></i-plus></button>
+                </div>
+                <div class="bdg-container flex flex-grow flex-col justify-center items-start">
+                    <p class="text-2xl font-black">$ 1,893.44</p>
+                    <p class="text-sm font-thin">USD</p>
+                    <span class="flex items-center justify-start w-full gap-2">
+                        <button class="btn btn-secondary">Transfer</button>
+                        <button class="btn btn-primary"><span>Add Money</span><i-plus class="size-6"></i-plus></button>
+                </div>
+            </section>
+
+            <section class="main-container-row">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>User ID</th>
+                            <th>Date of Birth</th>
+                            <th>Job Title</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>CodeAgha</td>
+                            <td>1</td>
+                            <td>26/05/2006</td>
+                            <td>Fronend Developer</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>CodeAgha</td>
+                            <td>1</td>
+                            <td>26/05/2006</td>
+                            <td>Fronend Developer</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>CodeAgha</td>
+                            <td>1</td>
+                            <td>26/05/2006</td>
+                            <td>Fronend Developer</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!--Scroll Holder-->
+            <section class="my-12">...</section>
         </section>
+
+        <script src="index.js"></script>
     </main>
 </body>
 

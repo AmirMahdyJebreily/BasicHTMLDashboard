@@ -11,8 +11,26 @@
   }
 
   body {
-    @apply text-primary bg-background w-screen h-screen overflow-hidden p-5;
+    @apply text-primary bg-background w-screen h-screen overflow-hidden flex justify-start items-center flex-col md:p-4 gap-4;
   }
+    /* width */
+    .scroll-bar::-webkit-scrollbar {
+      width: 7px;
+    }
+    /* Track */
+    .scroll-bar::-webkit-scrollbar-track {
+      background: #ffffff05;
+    }
+    /* Handle */
+    .scroll-bar::-webkit-scrollbar-thumb {
+      border-radius: 1000px;
+      background: #7785;
+      transition: all 0.2s;
+    }
+    /* Handle on hover */
+    .scroll-bar::-webkit-scrollbar-thumb:hover {
+      background: #5555;
+    }
 }
 
 @layer utilities {
@@ -23,41 +41,96 @@
 
 @layer components {
   main.flex-container {
-    @apply w-full h-full;
+    @apply size-full flex-1;
   }
 
   .btn-empty {
-    @apply hover:bg-gray-600/5 transition-colors duration-150 px-5 py-3
+    @apply hover:bg-gray-600/5 transition-colors duration-500
   }
 
-  .btn-only-icon-secondary {
-    @apply bg-secondary text-primary w-12 h-11 flex justify-center items-center hover:bg-secondary2;
+  .btn {
+    @apply flex justify-center items-center gap-2
   }
 
-  .badge-container {
-    @apply bg-white py-2 px-4 text-center text-4xl;
+  .btn-empty-dark {
+    @apply hover:bg-gray-600/80 transition-colors duration-500
+  }
+
+  .btn-secondary {
+    @apply btn-empty py-3 px-4 bg-secondary rounded-xl
+  }
+
+  .btn-primary {
+    @apply btn-empty-dark text-secondary py-3 px-4 bg-primary rounded-xl
+  }
+
+  .bdg-only-icon {
+    @apply text-primary w-12 h-11 flex justify-center items-center;
+  }
+
+  .bdg-only-icon-secondary {
+    @apply bg-secondary text-primary w-12 h-11 flex justify-center items-center;
+  }
+
+  .bdg-container {
+    @apply bg-white py-4 px-6 gap-4;
   }
 
   .logo {
-    @apply w-full;
+    @apply w-full sm:text-3xl text-xl font-semibold;
+  }
+
+  .sub-logo {
+    @apply w-full text-sm font-thin line-clamp-1 italic;
   }
 
   header.flex-container {
-    @apply py-4 gap-2;
+    @apply gap-2 w-full;
   }
 
-  aside.side-menu {
-    @apply bg-white h-full flex flex-col justify-start items-center py-4 px-5 z-50 w-72 absolute mt-6 me-4
-        md:z-0 md:static md:mt-0;
+  aside#side-menu {
+    @apply bg-white h-full flex flex-col justify-start items-center md:w-80 w-full z-50 absolute md:static top-20 overflow-x-hidden transition-[width] duration-300;
+  }
+
+  aside#side-menu.hide {
+    @apply w-0 md:w-72
   }
 
   ul.side-menu-sub{
-    @apply w-full h-full
+    @apply w-full h-full size-full py-4 px-5 flex justify-start items-stretch flex-col gap-1
   }
   ul.side-menu-sub > li {
-    @apply btn-empty rounded-lg flex items-center justify-between gap-4
+    @apply btn-empty rounded-lg flex items-center justify-between gap-4 px-5 py-3
   }
   li.selected {
     @apply bg-secondary
+  }
+
+  section#main-container{
+    @apply w-full flex-1 overflow-auto scroll-bar
+  }
+
+  .main-container-row{
+    @apply flex justify-evenly items-start flex-wrap w-full gap-y-2 gap-x-4
+  }
+
+  .main-container-row-cell{
+    @apply bdg-container flex justify-between flex-grow
+  }
+
+  table{
+    @apply w-full bg-white mt-4 text-center rounded-xl
+  }
+
+  thead{
+    @apply bg-secondary 
+  }
+
+  td, th{
+    @apply py-4 px-1.5
+  }
+
+  tr:nth-child(even){
+    @apply bg-slate-100
   }
 }
