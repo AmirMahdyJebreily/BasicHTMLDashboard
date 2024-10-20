@@ -10,9 +10,24 @@
     --clr-background: #f9fafb;
   }
 
-  body {
-    @apply text-primary bg-background w-screen h-screen overflow-hidden flex justify-start items-center flex-col md:p-4 gap-4;
+  :root[class~="dark"] {
+    --clr-primary: #c5c5c5;
+    --clr-secondary: #eef1f4;
+    --clr-secondary2: #c5c7c9;
+    --clr-background: #121212;
+    --clr-dark-sun : #1e1e1e;
   }
+
+  
+
+  body {
+    @apply text-primary bg-background w-screen h-screen overflow-hidden flex justify-start items-center flex-col md:p-4 gap-4 transition-colors;
+  }
+
+body.dark{
+  @apply transition-colors
+}
+
     /* width */
     .scroll-bar::-webkit-scrollbar {
       width: 7px;
@@ -57,11 +72,11 @@
   }
 
   .btn-secondary {
-    @apply btn-empty py-3 px-4 bg-secondary rounded-xl
+    @apply btn-empty py-3 px-4 bg-secondary rounded-xl dark:bg-neutral-900
   }
 
   .btn-primary {
-    @apply btn-empty-dark text-secondary py-3 px-4 bg-primary rounded-xl
+    @apply btn-empty-dark text-secondary py-3 px-4 bg-primary rounded-xl dark:bg-neutral-700
   }
 
   .bdg-only-icon {
@@ -69,11 +84,11 @@
   }
 
   .bdg-only-icon-secondary {
-    @apply bg-secondary text-primary w-12 h-11 flex justify-center items-center;
+    @apply bg-secondary text-primary w-12 h-11 flex justify-center items-center dark:bg-background;
   }
 
   .bdg-container {
-    @apply bg-white py-4 px-6 gap-4;
+    @apply bg-white py-4 px-6 gap-4 dark:bg-neutral-900;
   }
 
   .logo {
@@ -89,7 +104,7 @@
   }
 
   aside#side-menu {
-    @apply bg-white h-full flex flex-col justify-start items-center md:w-80 w-full z-50 absolute md:static top-20 overflow-x-hidden transition-[width] duration-300;
+    @apply bg-white h-full flex flex-col justify-start items-center md:w-80 w-full z-50 absolute md:static top-20 overflow-x-hidden transition-[width] duration-300 dark:bg-background;
   }
 
   aside#side-menu.hide {
@@ -103,7 +118,7 @@
     @apply btn-empty rounded-lg flex items-center justify-between gap-4 px-5 py-3
   }
   li.selected {
-    @apply bg-secondary
+    @apply bg-secondary dark:bg-neutral-800
   }
 
   section#main-container{
@@ -119,11 +134,11 @@
   }
 
   table{
-    @apply w-full bg-white mt-4 text-center rounded-xl
+    @apply w-full bg-white mt-4 text-center rounded-xl dark:bg-sunDark
   }
 
   thead{
-    @apply bg-secondary 
+    @apply bg-secondary  dark:bg-neutral-900
   }
 
   td, th{
@@ -131,6 +146,6 @@
   }
 
   tr:nth-child(even){
-    @apply bg-slate-100
+    @apply bg-slate-100 dark:bg-neutral-800
   }
 }

@@ -13,6 +13,7 @@ module.exports = {
         secondary: 'var(--clr-secondary)',
         secondary2: 'var(--clr-secondary2)',
         background: 'var(--clr-background)',
+        sunDark:'var(--clr-dark-sun)'
       },
     },
   },
