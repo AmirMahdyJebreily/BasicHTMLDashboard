@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,14 +9,20 @@
     <script src="./iconsMod.js" type="module"></script>
 </head>
 
-<body dir="rtl">
+<body dir="ltr">
     <header class="flex-container bdg-container">
         <button id="menu-toggle" class="bdg-only-icon btn-empty rounded-full md:hidden">
-            <i-menu-3bars class="size-6" />
+            <i-menu-3bars class="size-6"></i-menu-3bars>
         </button>
-        <span class="flex justify-start items-start flex-col">
+        
+        <span class="flex justify-start items-start flex-col flex-1">
             <h1 class="logo">Lorem, ipsum.</h1>
-            <h2 class="sub-logo">Lorem ipsum dolor sit amet consectetur.</h2>
+            <h2 class="sub-logo">This dashboard is designed by codeagha : <a href="https://github.com/AmirMahdyJebreily/BasicHTMLDashboard" class="text-purple-600 hover:text-purple-900">repo</a></h2>
+        </span>
+        <span class="flex justify-start items-center flex-none">
+            <button id="dark-toggle" class="flex justify-start items-center">
+                <i-light class="size-4"></i-light>
+            </button>
         </span>
     </header>
     <main class="flex-container gap-4">

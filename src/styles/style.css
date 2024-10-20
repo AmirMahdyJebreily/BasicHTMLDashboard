@@ -872,6 +872,11 @@ tr:nth-child(even) {
   display: table;
 }
 
+.size-4 {
+  width: 1rem;
+  height: 1rem;
+}
+
 .size-6 {
   width: 1.5rem;
   height: 1.5rem;
@@ -930,10 +935,6 @@ tr:nth-child(even) {
   gap: 1rem;
 }
 
-.overflow-x-scroll {
-  overflow-x: scroll;
-}
-
 .rounded-full {
   border-radius: 9999px;
 }
@@ -972,10 +973,20 @@ tr:nth-child(even) {
   font-weight: 100;
 }
 
+.text-purple-600 {
+  --tw-text-opacity: 1;
+  color: rgb(147 51 234 / var(--tw-text-opacity));
+}
+
 .flex-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.hover\:text-purple-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(88 28 135 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
